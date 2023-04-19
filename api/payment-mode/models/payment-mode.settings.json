@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payment_modes",
+  "info": {
+    "name": "payment-mode"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "mobile_money",
+        "card"
+      ]
+    }
+  }
+}

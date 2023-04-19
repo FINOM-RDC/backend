@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mission-zones",
+      "handler": "mission-zone.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mission-zones/count",
+      "handler": "mission-zone.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mission-zones/:id",
+      "handler": "mission-zone.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mission-zones",
+      "handler": "mission-zone.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mission-zones/:id",
+      "handler": "mission-zone.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mission-zones/:id",
+      "handler": "mission-zone.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

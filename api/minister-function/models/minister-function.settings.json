@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "minister_functions",
+  "info": {
+    "name": "minister_function",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "mission_expensives": {
+      "via": "minister_function",
+      "collection": "mission-expensive"
+    },
+    "type": {
+      "type": "string"
+    }
+  }
+}

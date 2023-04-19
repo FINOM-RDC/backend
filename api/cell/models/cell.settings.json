@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "cells",
+  "info": {
+    "name": "Cell"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 3
+    },
+    "attacheds": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "cell"
+    },
+    "manager": {
+      "via": "cell",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mission-orders",
+      "handler": "mission-order.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mission-orders/count",
+      "handler": "mission-order.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mission-orders/:id",
+      "handler": "mission-order.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mission-orders",
+      "handler": "mission-order.createMissionOrder",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mission-orders/level/:id/:level",
+      "handler": "mission-order.updateMissionOrderLevel",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mission-orders/:id",
+      "handler": "mission-order.updateMissionOrder",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mission-orders/:id",
+      "handler": "mission-order.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/minister-functions",
+      "handler": "minister-function.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/minister-functions/count",
+      "handler": "minister-function.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/minister-functions/:id",
+      "handler": "minister-function.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/minister-functions",
+      "handler": "minister-function.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/minister-functions/:id",
+      "handler": "minister-function.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/minister-functions/:id",
+      "handler": "minister-function.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

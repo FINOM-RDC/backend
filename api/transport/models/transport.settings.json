@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "transports",
+  "info": {
+    "name": "transport"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Velo",
+        "Bus",
+        "Moto",
+        "Vehicule",
+        "Bateau",
+        "Avion",
+        "Train"
+      ],
+      "required": true
+    }
+  }
+}

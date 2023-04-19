@@ -1,0 +1,112 @@
+{
+  "kind": "collectionType",
+  "collectionName": "users-permissions_user",
+  "info": {
+    "name": "user",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false,
+    "timestamps": true
+  },
+  "attributes": {
+    "username": {
+      "type": "string",
+      "minLength": 3,
+      "unique": true,
+      "configurable": false,
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "minLength": 6,
+      "configurable": false,
+      "required": true
+    },
+    "provider": {
+      "type": "string",
+      "configurable": false
+    },
+    "password": {
+      "type": "password",
+      "minLength": 6,
+      "configurable": false,
+      "private": true
+    },
+    "resetPasswordToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmationToken": {
+      "type": "string",
+      "configurable": false,
+      "private": true
+    },
+    "confirmed": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "blocked": {
+      "type": "boolean",
+      "default": false,
+      "configurable": false
+    },
+    "role": {
+      "model": "role",
+      "via": "users",
+      "plugin": "users-permissions",
+      "configurable": false
+    },
+    "Name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "last_name": {
+      "type": "string",
+      "required": true,
+      "minLength": 2
+    },
+    "postname": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "biginteger",
+      "required": true,
+      "unique": true
+    },
+    "cell": {
+      "via": "manager",
+      "model": "cell"
+    },
+    "banc_cards": {
+      "via": "user",
+      "collection": "banc-card"
+    },
+    "mission_order_modifs": {
+      "via": "last_modifier",
+      "model": "mission-order"
+    },
+    "mission_expensive": {
+      "via": "user",
+      "model": "mission-expensive"
+    },
+    "mission_order_manageds": {
+      "via": "mission_manager",
+      "collection": "mission-order"
+    },
+    "mission_orders": {
+      "via": "participants",
+      "collection": "mission-order"
+    },
+    "mission_order": {
+      "via": "initiator",
+      "model": "mission-order"
+    },
+    "minister_function": {
+      "model": "minister-function"
+    }
+  }
+}

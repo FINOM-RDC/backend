@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "banc_cards",
+  "info": {
+    "name": "banc_card"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "card": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "user": {
+      "via": "banc_cards",
+      "plugin": "users-permissions",
+      "model": "user"
+    }
+  }
+}

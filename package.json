@@ -1,0 +1,44 @@
+{
+  "name": "finom-api",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "engine": {
+    "node": ">=14.20.1"
+  },
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi",
+    "gcp-build": "strapi build"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "node-cron": "^3.0.1",
+    "socket.io": "^4.5.1",
+    "strapi": "3.6.10",
+    "strapi-admin": "3.6.10",
+    "strapi-connector-mongoose": "3.6.10",
+    "strapi-plugin-content-manager": "3.6.10",
+    "strapi-plugin-content-type-builder": "3.6.10",
+    "strapi-plugin-documentation": "3.6.10",
+    "strapi-plugin-email": "3.6.10",
+    "strapi-plugin-graphql": "3.6.10",
+    "strapi-plugin-i18n": "3.6.10",
+    "strapi-plugin-upload": "3.6.10",
+    "strapi-plugin-users-permissions": "3.6.10",
+    "strapi-utils": "3.6.10"
+  },
+  "author": {
+    "name": "Mechack Tambwe"
+  },
+  "strapi": {
+    "uuid": "03378f96-7dc3-4b86-a007-8b54a964e7a1"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": "^6.0.0"
+  },
+  "license": "MIT"
+}

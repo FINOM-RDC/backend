@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/banc-cards",
+      "handler": "banc-card.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/banc-cards/count",
+      "handler": "banc-card.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/banc-cards/:id",
+      "handler": "banc-card.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/banc-cards",
+      "handler": "banc-card.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/banc-cards/:id",
+      "handler": "banc-card.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/banc-cards/:id",
+      "handler": "banc-card.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

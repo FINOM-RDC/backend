@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mission_expensives",
+  "info": {
+    "name": "mission_expensive",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "unit_price": {
+      "type": "biginteger",
+      "required": true,
+      "default": "0"
+    },
+    "user": {
+      "via": "mission_expensive",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "sum_state": {
+      "via": "mission_expensive",
+      "model": "sum-state"
+    },
+    "mission_zone": {
+      "model": "mission-zone",
+      "via": "mission_expensives"
+    },
+    "go_pass_and_covid_test": {
+      "type": "biginteger",
+      "default": "156435"
+    },
+    "minister_function": {
+      "via": "mission_expensives",
+      "model": "minister-function"
+    },
+    "other": {
+      "type": "json"
+    }
+  }
+}

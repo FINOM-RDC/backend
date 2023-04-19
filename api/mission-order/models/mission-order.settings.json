@@ -1,0 +1,101 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mission_orders",
+  "info": {
+    "name": "mission_order",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "participants": {
+      "via": "mission_orders",
+      "plugin": "users-permissions",
+      "collection": "user",
+      "dominant": true
+    },
+    "subject": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 20
+    },
+    "initiator": {
+      "via": "mission_order",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "itinerary": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 4
+    },
+    "start_date": {
+      "type": "date",
+      "required": true
+    },
+    "end_date": {
+      "type": "date",
+      "required": true
+    },
+    "reference": {
+      "type": "string",
+      "required": true,
+      "unique": false
+    },
+    "last_modifier": {
+      "via": "mission_order_modifs",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "sum_states": {
+      "via": "mission_order",
+      "collection": "sum-state"
+    },
+    "comment": {
+      "type": "richtext"
+    },
+    "mission_manager": {
+      "via": "mission_order_manageds",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "level": {
+      "via": "mission_orders",
+      "model": "level"
+    },
+    "destination": {
+      "type": "richtext"
+    },
+    "mission_zone": {
+      "model": "mission-zone",
+      "via": "mission_order"
+    },
+    "type": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "transport": {
+      "type": "string"
+    },
+    "organization": {
+      "type": "string"
+    },
+    "sous_bassement": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

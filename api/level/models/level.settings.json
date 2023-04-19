@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "levels",
+  "info": {
+    "name": "level",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "description": {
+      "type": "string"
+    },
+    "title": {
+      "type": "enumeration",
+      "enum": [
+        "un",
+        "deux",
+        "trois",
+        "quatre",
+        "cinq",
+        "six",
+        "sept",
+        "huit",
+        "neuf",
+        "dix",
+        "onze",
+        "douze",
+        "treize",
+        "quatorze",
+        "quinze"
+      ],
+      "required": true,
+      "default": "un"
+    },
+    "sum_states": {
+      "via": "level",
+      "collection": "sum-state"
+    },
+    "mission_orders": {
+      "via": "level",
+      "collection": "mission-order"
+    }
+  }
+}

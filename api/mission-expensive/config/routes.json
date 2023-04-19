@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/mission-expensives",
+      "handler": "mission-expensive.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mission-expensives/count",
+      "handler": "mission-expensive.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/mission-expensives/:id",
+      "handler": "mission-expensive.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/mission-expensives",
+      "handler": "mission-expensive.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/mission-expensives/:id",
+      "handler": "mission-expensive.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/mission-expensives/:id",
+      "handler": "mission-expensive.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

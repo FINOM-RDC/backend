@@ -1,0 +1,67 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sum_states",
+  "info": {
+    "name": "sum-state",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "mission_order": {
+      "via": "sum_states",
+      "model": "mission-order"
+    },
+    "state": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "rejected",
+        "validate"
+      ]
+    },
+    "mission_expensive": {
+      "via": "sum_state",
+      "model": "mission-expensive"
+    },
+    "duration": {
+      "type": "integer",
+      "max": 15,
+      "required": true,
+      "default": 1
+    },
+    "cost": {
+      "type": "biginteger",
+      "default": "0",
+      "required": true
+    },
+    "travel_costs": {
+      "type": "biginteger"
+    },
+    "mission_representation_cost": {
+      "type": "biginteger"
+    },
+    "unit_price": {
+      "type": "biginteger",
+      "default": "0"
+    },
+    "payed": {
+      "type": "boolean"
+    },
+    "level": {
+      "via": "sum_states",
+      "model": "level"
+    },
+    "additional_cost": {
+      "type": "json"
+    }
+  }
+}

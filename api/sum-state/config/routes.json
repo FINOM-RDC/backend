@@ -1,0 +1,77 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/sum-states",
+      "handler": "sum-state.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sum-states/count",
+      "handler": "sum-state.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/sum-states/:id",
+      "handler": "sum-state.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/sum-states/:mission",
+      "handler": "sum-state.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sum-states/:id",
+      "handler": "sum-state.update",
+      "config": {
+        "policies": []
+      }
+    }
+    ,
+    {
+      "method": "PUT",
+      "path": "/sum-states/level/:id/:level",
+      "handler": "sum-state.updateSumStateLevel",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sum-states/additional-costs/:id",
+      "handler": "sum-state.updateSumState",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/sum-states/payed/:id",
+      "handler": "sum-state.updatePaye",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/sum-states/:id",
+      "handler": "sum-state.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
